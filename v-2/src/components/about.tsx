@@ -21,31 +21,18 @@ export const About = () => {
       <SectionHeading heading="About Me" />
       <div className="-mt-5 max-w-3xl text-center leading-7">
         <p className="mb-4">
-          My name is Yash Kapure, and I am a Frontend Engineer with 3.5+ years
-          of real-world experience designing fast, usable, and SEO-friendly web
-          applications. My specialty is crafting smooth-looking UIs with
-          React.js, Next.js, Tailwind CSS, and shadcn/ui and bringing things to
-          life with Framer Motion.
+          I am Mohammad Umar, a Full-Stack MERN Architect specializing in performance and scale. I build robust backends (Node.js/Express/MongoDB, focused on security/API integration) and deliver blazing-fast, accessible UIs using Next.js, React, and Tailwind CSS, ensuring end-to-end, clean-coded solutions with superior user experience.
         </p>
         <p className="mb-4">
-          Alongside my frontend experience, I possess good full-stack skills in
-          JavaScript and TypeScript, and familiar experience in Node.js,
-          Express, and databases like MongoDB and MySQL. This allows me to
-          manage projects from start-to-finish, from designing smooth UIs
-          through connecting scalable backends.
+          I have great experience building scalable web servers using Node.js, specializing in robust security features. I utilize JWT cookies for strong authentication, and leverage advanced MongoDB Aggregation Pipelines to write clean, efficient, and high-performance backend code.
         </p>
         <p className="mb-4">
-          I have built software for product companies, clinics, and start-ups,
-          delivering maximum performance, engagement, and lead capture through
-          precise engineering. Writing elegant, up-to-date code and discovering
-          new tools and trends thrills me.
+         I possess a strong knowledge of Data Structures and Algorithms, which significantly enhances my problem-solving skills and ensures efficient data handling and optimal performance on the server side.
         </p>
-        <p>
-          Outside of work, I enjoy cricket and a good cup of tea, but now I am
-          used to drinking coffee. I&apos;m always up for learning,
-          experimenting, and growing and looking for opportunities wherein I can
-          bring value toward impactful products and inventive teams.
+        <p className="mb-4">
+         Outside of development, I actively analyze cryptocurrency investment markets and occasionally engage in trading, which sharpens my risk-taking capabilities and deepens my understanding of the future of digital finance and blockchain technology. I am also continuously exploring and learning about new technologies.
         </p>
+       
       </div>
       <Skills />
     </motion.section>

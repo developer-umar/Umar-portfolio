@@ -20,7 +20,7 @@ const HomePage = async () => {
         <About />
         <Experience />
         <Projects />
-        <Testimonials />
+        {/* <Testimonials /> */}
         <FAQ />
         <Contact />
         <Footer />

@@ -34,13 +34,13 @@ export const metadata: Metadata = {
     url: siteConfig.url,
     title: siteConfig.title,
     description: siteConfig.description,
-    siteName: 'Yash Kapure Portfolio',
+    siteName: 'Mohammad Umar Portfolio',
     images: [
       {
         url: `${siteConfig.url}/images/metaimg.png`,
         width: 1200,
         height: 630,
-        alt: 'Yash Kapure - Full Stack Developer',
+        alt: 'Mohammad Umar - MERN Stack Developer',
       },
     ],
   },
@@ -51,16 +51,16 @@ export const metadata: Metadata = {
     creator: '@KapureYash',
     images: [`${siteConfig.url}/images/metaimg.png`],
   },
-  authors: [{ name: 'Yash Kapure', url: 'https://github.com/Yashkapure06' }],
-  creator: 'Yash Kapure',
-  publisher: 'Yash Kapure',
+  authors: [{ name: 'Mohammad  Umar', url: 'https://www.github.com/developer-umar' }],
+  creator: 'Mohammad Umar',
+  publisher: 'Mohammad Umar',
   alternates: {
     canonical: siteConfig.url,
   },
   other: {
-    author: 'Yash Kapure',
-    email: 'yashkapure06@gmail.com',
-    copyright: 'Yash Kapure 2023',
+    author: 'Mohammad  Umar',
+    email: 'mohammadumar8010@gmail.com',
+    copyright: 'Mohammad Umar 2023',
   },
 };
 
@@ -69,14 +69,14 @@ const RootLayout = ({ children }: PropsWithChildren) => {
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'Person',
-    name: 'Yash Kapure',
-    alternateName: 'Yash Vinod Kapure',
+    name: 'Mohammad  Umar',
+    alternateName: 'MOhammad Umar',
     jobTitle: 'Frontend Engineer & Full Stack Developer',
     description:
-      'Hi there! My name is Yash and I am a programmer with a passion for learning and exploring new technologies. With a strong background in full-stack development, I have a well-rounded skill set and am always looking to expand my knowledge and take on new challenges. As a dedicated and driven individual, I am constantly seeking out opportunities to grow and improve as a programmer.',
+      'Hi there! My name is Umar and I am a programmer with a passion for learning and exploring new technologies. With a strong background in full-stack development, I have a well-rounded skill set and am always looking to expand my knowledge and take on new challenges. As a dedicated and driven individual, I am constantly seeking out opportunities to grow and improve as a programmer.',
     url: siteConfig.url,
     image: `${siteConfig.url}/images/profile.jpg`,
-    email: 'yashkapure06@gmail.com',
+    email: 'mohammadumar8010@gmail.com',
     sameAs: [
       'https://github.com/Yashkapure06',
       'https://linkedin.com/in/yash-kapure',
@@ -133,7 +133,7 @@ const RootLayout = ({ children }: PropsWithChildren) => {
         'Professional web development services including React.js, Next.js, Node.js, React-Native, and full-stack development. Best Freelancer Near me, Affordable Freelancer Near me, Hourly based paid freelancer near me.',
       provider: {
         '@type': 'Person',
-        name: 'Yash Kapure',
+        name: 'Mohammad  Umar',
       },
       areaServed: 'United Kingdom',
       serviceType: 'Web Development',

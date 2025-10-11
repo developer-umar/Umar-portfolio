@@ -60,7 +60,7 @@ export const Contact = () => {
               asChild
             >
               <Link href="mailto:yashkapure06@gmail.com">
-                yashkapure06@gmail.com
+                mohammadumar8010@gmail.com
               </Link>
             </Button>{' '}
             or through this form.
