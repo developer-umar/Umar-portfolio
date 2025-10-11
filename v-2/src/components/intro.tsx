@@ -57,9 +57,9 @@ export const Intro = () => {
       >
         Hi I&#39;m
         <span className="bg-gradient-to-r from-rose-700 to-pink-600 bg-clip-text text-transparent">
-          Yash Kapure
+          Mohammad Umar
         </span>
-        - Frontend Engineer with Full-Stack Expertise.
+        - MERN Stack Developer.
       </motion.h1>
       <motion.p
         initial={{ opacity: 0, y: 100 }}
@@ -69,13 +69,7 @@ export const Intro = () => {
         }}
         className="text-muted-foreground max-w-xl"
       >
-        I build fast, accessible, and SEO-friendly web applications using
-        React.js, Next.js, Tailwind CSS, and shadcn/ui. With 3.5+ years of
-        experience and strong full-stack skills in JavaScript and TypeScript, I
-        am passionate about creating smooth user interfaces, maintaining
-        excellent UI/UX, and writing clean, maintainable code. I craft modern
-        user experiences while also delivering scalable backend integrations
-        when needed.
+        I am a Proficient MERN Stack Developer focused on high-performance solutions. I architect scalable backends (Node.js/Express/MongoDB), ensuring secure JWT authentication and robust API integration. Concurrently, I craft fast, SEO-friendly UIs using Next.js, React.js, and Tailwind CSS, delivering complete, clean-coded systems with a commitment to both full-stack excellence.
       </motion.p>
       <motion.div
         initial={{ opacity: 0, y: 100 }}
@@ -92,7 +86,7 @@ export const Intro = () => {
         </Button>
         <Button variant="outline" size="lg" className="hidden sm:flex" asChild>
           <a
-            href="/cv/Yash Kapure CV.pdf"
+            href="/cv/Umar_CV.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -101,7 +95,7 @@ export const Intro = () => {
         </Button>
         <Button variant="outline" size="icon" asChild>
           <Link
-            href="https://linkedin.com/in/yash-kapure"
+            href="https://www.linkedin.com/in/umar15dev"
             aria-label="Linkedin"
             target="_blank"
           >
@@ -110,7 +104,7 @@ export const Intro = () => {
         </Button>
         <Button variant="outline" size="icon" asChild>
           <Link
-            href="https://github.com/Yashkapure06"
+            href="https://www.github.com/developer-umar"
             aria-label="Github"
             target="_blank"
           >
@@ -119,7 +113,7 @@ export const Intro = () => {
         </Button>
         <Button variant="outline" size="icon" asChild>
           <Link
-            href="https://www.instagram.com/_yashkapure_"
+            href="https://www.instagram.com/_umar_md_1"
             aria-label="Instagram"
             target="_blank"
           >
@@ -128,7 +122,7 @@ export const Intro = () => {
         </Button>
         <Button variant="outline" size="icon" asChild>
           <Link
-            href="https://twitter.com/KapureYash"
+            href="https://x.com/mdumar9140"
             aria-label="Twitter"
             target="_blank"
           >

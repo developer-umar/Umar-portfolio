@@ -18,9 +18,13 @@ export const links = [
     hash: '#projects',
   },
   {
-    name: 'Testimonials',
-    hash: '#testimonials',
+    name: 'Education',
+    hash: '#education',
   },
+  // {
+  //   name: 'Blog',
+  //   hash: '#blog',
+  // },
   {
     name: 'Contact',
     hash: '#contact',
@@ -390,12 +394,12 @@ export const projectsData = [
 
 export const experiencesData = [
   {
-    title: 'IT Tutor',
-    company: 'Impact Academies, United Kingdom',
+    title: 'MERN Stack Developer.',
+    company: 'Riveyra Infotech Pvt. Ltd., Kanpur, India',
     description:
       'I teach Scratch, Java, JavaScript, Python, HTML, CSS, Motion Design, AI, ML, and more. I help students learn these skills and build their own projects. I teach from age 5 to 40+',
 
-    period: '2024 - Present',
+    period: '45 Days',
     technologies: [
       'Scratch',
       'Java',
