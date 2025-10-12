@@ -1,5 +1,6 @@
 import { About } from '@/components/about';
 import { Contact } from '@/components/contact';
+import { EducationSection } from '@/components/education';
 import { Experience } from '@/components/experience';
 import { FAQ } from '@/components/faq';
 import { Footer } from '@/components/footer';
@@ -9,7 +10,7 @@ import { Projects } from '@/components/projects';
 import { SectionDivider } from '@/components/section-divider';
 import { Testimonials } from '@/components/testimonials';
 import { ThemeToggle } from '@/components/theme-toggle';
-
+import CertificatesPage from '@/components/certificates';
 const HomePage = async () => {
   return (
     <>
@@ -21,7 +22,9 @@ const HomePage = async () => {
         <Experience />
         <Projects />
         {/* <Testimonials /> */}
-        <FAQ />
+        <EducationSection />
+<CertificatesPage />
+        {/* <FAQ /> */}
         <Contact />
         <Footer />
       </div>

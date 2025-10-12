@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
 
 import { Button } from './button';
 import { Icons } from './icons';
@@ -32,29 +33,26 @@ const fadeInAnimationVariants = {
 
 export const Project = ({ project, index }: TProps) => {
   const { image, title, description, technologies, links } = project;
+  const [showMore, setShowMore] = useState(false);
+
+  // Limit description to approx. 4 lines (around 220 chars)
+  const isLong = description.length > 220;
+  const shortDesc = isLong ? description.slice(0, 220) + '...' : description;
 
   return (
     <motion.div
       variants={fadeInAnimationVariants}
       initial="initial"
       whileInView="animate"
-      viewport={{
-        once: true,
-      }}
+      viewport={{ once: true }}
       custom={index}
-      className="flex flex-col rounded border p-5 "
+      className="flex flex-col rounded-lg border p-5 transition hover:shadow-md"
     >
-      {/* <Link
-        href={links.github}
-        aria-label={title}
-        target="_blank"
-        className="overflow-hidden rounded"
-      > */}
       {image.startsWith('http') ? (
         <img
           src={image}
           alt={title}
-          className="h-[390px] w-full rounded object-cover transition-transform hover:scale-105"
+          className="h-[390px] w-full rounded-lg object-cover transition-transform hover:scale-105"
         />
       ) : (
         <Image
@@ -62,25 +60,37 @@ export const Project = ({ project, index }: TProps) => {
           alt={title}
           height={390}
           width={600}
-          className="rounded transition-transform hover:scale-105"
+          className="rounded-lg transition-transform hover:scale-105"
         />
       )}
-      {/* </Link> */}
-      <h3 className="mt-3 text-xl font-medium">{title}</h3>
-      <p className="text-muted-foreground mb-2 mt-1">{description}</p>
-      <div className="flex flex-wrap gap-2">
+
+      <h3 className="mt-3 text-xl font-semibold">{title}</h3>
+
+      <p className="text-muted-foreground mb-2 mt-1 text-sm sm:text-base leading-relaxed">
+        {showMore ? description : shortDesc}
+      </p>
+
+      {isLong && (
+        <button
+          onClick={() => setShowMore(!showMore)}
+          className="text-blue-500 hover:text-blue-700 text-sm font-medium mb-3 self-start"
+        >
+          {showMore ? 'See Less ▲' : 'See More ▼'}
+        </button>
+      )}
+
+      <div className="flex flex-wrap gap-2 mb-3">
         {technologies.map((tech) => (
-          <span className="rounded-full border px-3 py-1 text-sm" key={tech}>
+          <span
+            key={tech}
+            className="rounded-full border px-3 py-1 text-xs sm:text-sm"
+          >
             {tech}
           </span>
         ))}
       </div>
-      <Link
-        href={links.preview}
-        aria-label={title}
-        target="_blank"
-        className="mt-4 w-fit"
-      >
+
+      <Link href={links.preview} aria-label={title} target="_blank" className="mt-auto w-fit">
         <Button variant="outline" size="sm" className="flex items-center gap-2">
           <Icons.preview className="size-4" />
           Preview

@@ -1,9 +1,7 @@
 'use client';
 
-import { useEffect } from 'react';
-import { useForm } from '@formspree/react';
+import { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
 import { toast } from 'sonner';
 
 import { Button } from '@/components/button';
@@ -13,69 +11,66 @@ import { useSectionInView } from '@/hooks/use-section-in-view';
 
 export const Contact = () => {
   const { ref } = useSectionInView('Contact');
-  const [state, handleSubmit] = useForm('mbjervyr');
+  const formRef = useRef<HTMLFormElement>(null);
+  const [submitting, setSubmitting] = useState(false);
 
-  useEffect(() => {
-    if (state.succeeded) {
-      toast.success(
-        'Thank you for getting in touch! I will get back to you soon.'
-      );
-      // Clear the form after successful submission
-      const form = document.querySelector('form');
-      if (form) {
-        form.reset();
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setSubmitting(true);
+
+    const formData = new FormData(e.currentTarget);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      const res = await fetch('/api/whatsapp', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      const result = await res.json();
+      if (result.success) {
+        toast.success('Message sent to your WhatsApp!');
+        if (formRef.current) formRef.current.reset(); // ✅ safe reset
+      } else {
+        toast.error('Failed to send message.');
+        console.error(result.error);
       }
+    } catch (err) {
+      toast.error('Something went wrong.');
+      console.error(err);
     }
-    if (state.errors && Object.keys(state.errors).length > 0) {
-      toast.error('Something went wrong. Please try again.');
-    }
-  }, [state.succeeded, state.errors]);
+
+    setSubmitting(false);
+  };
 
   return (
     <motion.section
       ref={ref}
       id="contact"
       className="my-10 w-full scroll-mt-28 md:mb-20"
-      initial={{
-        opacity: 0,
-      }}
-      whileInView={{
-        opacity: 1,
-      }}
-      transition={{
-        duration: 1,
-      }}
-      viewport={{
-        once: true,
-      }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: true }}
     >
       <SectionHeading
         heading="Get In Touch"
         content={
           <>
-            Please contact me directly at{' '}
-            <Button
-              variant="link"
-              className="text-muted-foreground hover:text-foreground h-fit p-0 font-medium underline transition-colors"
-              asChild
-            >
-              <Link href="mailto:yashkapure06@gmail.com">
-                mohammadumar8010@gmail.com
-              </Link>
-            </Button>{' '}
-            or through this form.
+            Fill out the form below and I will reply to you on WhatsApp.
           </>
         }
       />
+
       <form
+        ref={formRef}
         onSubmit={handleSubmit}
-        className="flex flex-col items-center gap-5"
+        className="flex flex-col items-center gap-5 mt-8 w-full max-w-xl mx-auto"
       >
-        <div className="w-full max-w-xl">
-          <label
-            htmlFor="name"
-            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-          >
+        {/* Name */}
+        <div className="w-full">
+          <label htmlFor="name" className="text-sm font-medium">
             Name
           </label>
           <input
@@ -84,14 +79,13 @@ export const Contact = () => {
             name="name"
             placeholder="Your Name"
             required
-            className="border-input bg-background ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring mt-2 flex h-10 w-full rounded-md border px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+            className="mt-2 h-10 w-full rounded-md border px-3 py-2 text-sm border-input bg-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring"
           />
         </div>
-        <div className="w-full max-w-xl">
-          <label
-            htmlFor="email"
-            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-          >
+
+        {/* Email */}
+        <div className="w-full">
+          <label htmlFor="email" className="text-sm font-medium">
             Email
           </label>
           <input
@@ -100,14 +94,13 @@ export const Contact = () => {
             name="email"
             placeholder="hello@gmail.com"
             required
-            className="border-input bg-background ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring mt-2 flex h-10 w-full rounded-md border px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+            className="mt-2 h-10 w-full rounded-md border px-3 py-2 text-sm border-input bg-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring"
           />
         </div>
-        <div className="w-full max-w-xl">
-          <label
-            htmlFor="message"
-            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-          >
+
+        {/* Message */}
+        <div className="w-full">
+          <label htmlFor="message" className="text-sm font-medium">
             Message
           </label>
           <textarea
@@ -115,11 +108,13 @@ export const Contact = () => {
             name="message"
             placeholder="Hello! What's up?"
             required
-            className="border-input bg-background ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring mt-2 flex h-60 w-full resize-none rounded-md border px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+            className="mt-2 h-60 w-full resize-none rounded-md border px-3 py-2 text-sm border-input bg-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring"
           ></textarea>
         </div>
-        <Button type="submit" size="lg" disabled={state.submitting}>
-          {state.submitting ? 'Sending...' : 'Submit'}{' '}
+
+        {/* Submit Button */}
+        <Button type="submit" size="lg" disabled={submitting}>
+          {submitting ? 'Sending...' : 'Send on WhatsApp'}
           <Icons.arrowRight className="ml-2 size-4" />
         </Button>
       </form>
