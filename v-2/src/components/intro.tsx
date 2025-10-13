@@ -26,8 +26,8 @@ export const Intro = () => {
         className="mb-8"
       >
         <img
-          src="/images/profile.jpg"
-          alt="Yash Kapure Profile"
+          src="/images/fav1_4.jpeg"
+          alt="Mohammad Umar"
           className="size-36 rounded-full object-cover grayscale transition-all duration-300 hover:scale-105 hover:grayscale-0"
         />
       </motion.div>

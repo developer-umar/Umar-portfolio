@@ -19,10 +19,14 @@ export const Contact = () => {
     setSubmitting(true);
 
     const formData = new FormData(e.currentTarget);
-    const data = Object.fromEntries(formData.entries());
+    const data = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      message: formData.get('message'),
+    };
 
     try {
-      const res = await fetch('/api/whatsapp', {
+      const res = await fetch('/api/send-email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
@@ -30,10 +34,10 @@ export const Contact = () => {
 
       const result = await res.json();
       if (result.success) {
-        toast.success('Message sent to your WhatsApp!');
-        if (formRef.current) formRef.current.reset(); // ✅ safe reset
+        toast.success('Message sent successfully!');
+        if (formRef.current) formRef.current.reset();
       } else {
-        toast.error('Failed to send message.');
+        toast.error(result.error || 'Failed to send message.');
         console.error(result.error);
       }
     } catch (err) {
@@ -58,7 +62,7 @@ export const Contact = () => {
         heading="Get In Touch"
         content={
           <>
-            Fill out the form below and I will reply to you on WhatsApp.
+            Fill out the form below and I'll get back to you as soon as possible.
           </>
         }
       />
@@ -114,7 +118,7 @@ export const Contact = () => {
 
         {/* Submit Button */}
         <Button type="submit" size="lg" disabled={submitting}>
-          {submitting ? 'Sending...' : 'Send on WhatsApp'}
+          {submitting ? 'Sending...' : 'Send Message'}
           <Icons.arrowRight className="ml-2 size-4" />
         </Button>
       </form>

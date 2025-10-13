@@ -1,3 +1,5 @@
+'use client';
+
 import { About } from '@/components/about';
 import { Contact } from '@/components/contact';
 import { EducationSection } from '@/components/education';
@@ -11,7 +13,11 @@ import { SectionDivider } from '@/components/section-divider';
 import { Testimonials } from '@/components/testimonials';
 import { ThemeToggle } from '@/components/theme-toggle';
 import CertificatesPage from '@/components/certificates';
-const HomePage = async () => {
+import { useTheme } from 'next-themes';
+
+const HomePage = () => {
+  const { theme } = useTheme();
+
   return (
     <>
       <div className="container flex flex-col items-center">
@@ -23,7 +29,8 @@ const HomePage = async () => {
         <Projects />
         {/* <Testimonials /> */}
         <EducationSection />
-<CertificatesPage />
+        {/* ✅ Theme prop pass करें */}
+        <CertificatesPage theme={theme as 'dark' | 'light' | undefined} />
         {/* <FAQ /> */}
         <Contact />
         <Footer />

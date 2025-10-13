@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: siteConfig.title,
     description: siteConfig.description,
-    creator: '@KapureYash',
+    creator: '@MohammadUmar',
     images: [`${siteConfig.url}/images/metaimg.png`],
   },
   authors: [{ name: 'Mohammad  Umar', url: 'https://www.github.com/developer-umar' }],
@@ -78,10 +78,10 @@ const RootLayout = ({ children }: PropsWithChildren) => {
     image: `${siteConfig.url}/images/profile.jpg`,
     email: 'mohammadumar8010@gmail.com',
     sameAs: [
-      'https://github.com/Yashkapure06',
-      'https://linkedin.com/in/yash-kapure',
-      'https://twitter.com/KapureYash',
-      'https://www.instagram.com/_yashkapure_',
+      'https://www.github.com/developer-umar',
+      'https://www.linkedin.com/in/umar15dev',
+      'https://x.com/mdumar9140',
+      'https://www.instagram.com/_umar_md_1/',
     ],
     address: {
       '@type': 'PostalAddress',
@@ -218,7 +218,7 @@ const RootLayout = ({ children }: PropsWithChildren) => {
             `,
           }}
         />
-        <ThemeProvider attribute="class">
+  <ThemeProvider attribute="class" defaultTheme="dark">
           <ActiveSectionProvider>
             {children}
             <Toaster position="bottom-left" />
