@@ -2,7 +2,7 @@ import { env } from '@/env.mjs';
 
 export const siteConfig = {
   title:
-    'Mohammad Umar | Front-End Engineer | MERN/MEVN Stack Dev | Full Stack Web Developer | React-Native Developer',
+    'Umar | Front-End Engineer | MERN/MEVN Stack Dev | Full Stack Web Developer | React-Native Developer',
   description:
     'Hi there! My name is Umar and I am a programmer with a passion for learning and exploring new technologies. With a strong background in full-stack development, I have a well-rounded skill set and am always looking to expand my knowledge and take on new challenges. As a dedicated and driven individual, I am constantly seeking out opportunities to grow and improve as a programmer.',
   keywords: [
