@@ -1,10 +1,10 @@
 ## 🎉 Project Overview
 
-Yash Kapure's personal portfolio website built using Next.js, Tailwind CSS and Framer-motion. A Full Stack Developer with 3+ years of experience specializing in React.js, Next.js, Node.js, and MERN/MEVN stack.
+Mohamamd umar personal portfolio website built using Next.js, Tailwind CSS . A Full Stack Developer  great  experience of developer full stack  sacalable apllication specializing in express.js Node.js React.js, Next.js, , and MERNstack.
 
 ## 📍 Live
 
-Link to the live version: [https://yashkapure.dev](https://yashkapure.dev)
+
 
 ## 💾 Installation
 
@@ -38,4 +38,3 @@ and open http://localhost:3000 to see this app.
 - React-hook-form
 - Resend
 
-If you encounter a problem, write to this e-mail address: [yashkapure06@gmail.com](mailto:yashkapure06@gmail.com)

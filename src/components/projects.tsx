@@ -13,7 +13,6 @@ import { projectsData } from '@/lib/data';
 export const Projects = () => {
   const { ref } = useSectionInView('Projects');
 
-  // Show only first 2 projects
   const featuredProjects = projectsData.slice(0, 4);
 
   return (

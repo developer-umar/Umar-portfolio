@@ -1,31 +1,24 @@
 import { NextRequest, NextResponse } from 'next/server';
-
 import nodemailer from 'nodemailer';
 export async function POST(request: NextRequest) {
   try {
     const { name, email, message } = await request.json();
-
-    // Validate required fields
     if (!name || !email || !message) {
       return NextResponse.json(
         { error: 'All fields are required' },
         { status: 400 }
       );
     }
-
-    // Create transporter
     const transporter = nodemailer.createTransport({
-      service: 'gmail', // You can use other services like Outlook, Yahoo, etc.
+      service: 'gmail',
       auth: {
-        user: process.env.EMAIL_USER, // Your email
-        pass: process.env.EMAIL_PASSWORD, // Your email password or app password
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASSWORD,
       },
     });
-
-    // Email content
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: process.env.CONTACT_EMAIL, // Where you want to receive messages
+      to: process.env.CONTACT_EMAIL,
       subject: `New Contact Form Message from ${name}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -42,8 +35,6 @@ export async function POST(request: NextRequest) {
         </div>
       `,
     };
-
-    // Send email
     await transporter.sendMail(mailOptions);
 
     return NextResponse.json(

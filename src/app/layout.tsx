@@ -51,7 +51,9 @@ export const metadata: Metadata = {
     creator: '@MohammadUmar',
     images: [`${siteConfig.url}/images/metaimg.png`],
   },
-  authors: [{ name: 'Mohammad  Umar', url: 'https://www.github.com/developer-umar' }],
+  authors: [
+    { name: 'Mohammad  Umar', url: 'https://www.github.com/developer-umar' },
+  ],
   creator: 'Mohammad Umar',
   publisher: 'Mohammad Umar',
   alternates: {
@@ -65,13 +67,12 @@ export const metadata: Metadata = {
 };
 
 const RootLayout = ({ children }: PropsWithChildren) => {
-  // Structured Data for SEO
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: 'Mohammad  Umar',
     alternateName: 'MOhammad Umar',
-    jobTitle: 'Frontend Engineer & Full Stack Developer',
+    jobTitle: 'MERN stack developer & Full Stack Developer',
     description:
       'Hi there! My name is Umar and I am a programmer with a passion for learning and exploring new technologies. With a strong background in full-stack development, I have a well-rounded skill set and am always looking to expand my knowledge and take on new challenges. As a dedicated and driven individual, I am constantly seeking out opportunities to grow and improve as a programmer.',
     url: siteConfig.url,
@@ -85,7 +86,7 @@ const RootLayout = ({ children }: PropsWithChildren) => {
     ],
     address: {
       '@type': 'PostalAddress',
-      addressCountry: 'United Kingdom',
+      addressCountry: 'India',
     },
     alumniOf: [
       {
@@ -142,10 +143,10 @@ const RootLayout = ({ children }: PropsWithChildren) => {
       '@type': 'Occupation',
       name: 'Full Stack Web Developer',
       description:
-        'Frontend Engineer & Full Stack Developer specializing in React.js, Next.js, Node.js, and MERN/MEVN stack',
+        'MERN stack & Full Stack Developer specializing in express.js React.js, Next.js, Node.js, and MERN stack',
       occupationLocation: {
         '@type': 'Country',
-        name: 'United Kingdom',
+        name: 'India',
       },
     },
   };
@@ -153,7 +154,6 @@ const RootLayout = ({ children }: PropsWithChildren) => {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {/* Google Tag Manager */}
         <Script
           id="gtm-script"
           strategy="afterInteractive"
@@ -167,22 +167,17 @@ const RootLayout = ({ children }: PropsWithChildren) => {
             `,
           }}
         />
-
-        {/* Google AdSense */}
         <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5126308192729168"
           crossOrigin="anonymous"
         />
-
-        {/* Structured Data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(structuredData),
           }}
         />
-        {/* Preload critical resources */}
         <link rel="preload" href="/images/profile.jpg" as="image" />
         <link
           rel="preload"
@@ -194,7 +189,6 @@ const RootLayout = ({ children }: PropsWithChildren) => {
         <link rel="dns-prefetch" href="//linkedin.com" />
       </head>
       <body className={cn('min-h-screen font-sans', fonts)}>
-        {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-PDKQ7JZ"
@@ -203,8 +197,6 @@ const RootLayout = ({ children }: PropsWithChildren) => {
             style={{ display: 'none', visibility: 'hidden' }}
           />
         </noscript>
-
-        {/* Microsoft Clarity */}
         <Script
           id="clarity-script"
           strategy="afterInteractive"
@@ -218,7 +210,7 @@ const RootLayout = ({ children }: PropsWithChildren) => {
             `,
           }}
         />
-  <ThemeProvider attribute="class" defaultTheme="dark">
+        <ThemeProvider attribute="class" defaultTheme="dark">
           <ActiveSectionProvider>
             {children}
             <Toaster position="bottom-left" />

@@ -1,15 +1,13 @@
 import { NextResponse } from 'next/server';
-
 export async function POST(req: Request) {
   try {
     const { name, email, message } = await req.json();
-
     const res = await fetch(
       `https://graph.facebook.com/v17.0/${process.env.WHATSAPP_PHONE_ID}/messages`,
       {
         method: 'POST',
         headers: {
-          'Authorization': `Bearer ${process.env.WHATSAPP_TOKEN}`,
+          Authorization: `Bearer ${process.env.WHATSAPP_TOKEN}`,
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
@@ -24,7 +22,7 @@ export async function POST(req: Request) {
     );
 
     const result = await res.json();
-    console.log(result);  // <- Check if error messages are returned
+    console.log(result);
 
     return NextResponse.json({ success: true, result });
   } catch (error) {

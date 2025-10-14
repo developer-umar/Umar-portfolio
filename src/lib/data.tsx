@@ -25,10 +25,6 @@ export const links = [
     name: 'Certificates',
     hash: '#certificates',
   },
-  // {
-  //   name: 'Blog',
-  //   hash: '#blog',
-  // },
   {
     name: 'Contact',
     hash: '#contact',
@@ -40,14 +36,7 @@ export const projectsData = [
     image: '/images/naturescure.png',
     title: `Nature's Cure - A Virtual Herbal Garden`,
     description: `
-      Nature’s Cure is a responsive MERN stack web application showcasing 25+ medicinal plants across the six AYUSH systems — Ayurveda, Yoga & Naturopathy, Unani, Siddha, and Homeopathy.
-      It features dynamic search, category-based filtering, and intuitive navigation for smooth exploration.
-      Each plant comes alive with interactive 3D models integrated via @google/model-viewer, allowing full rotation, zoom, and info overlays.
-      The app also supports Augmented Reality (AR) for 25+ plants, boosting engagement during demos and presentations.
-      An integrated AI assistant ‘Herba’, powered by the Gemini API, enables natural language queries about plants.
-      This combination of technology and tradition creates an immersive and educational digital experience.
-      Nature’s Cure redefines how users discover and interact with medicinal plant knowledge.
-    `,
+      Nature’s Cure is responsive show casing 25+ medicinal plants across six AYUSH systems, with dynamic search, category filtering and intuitive navigation.Integrated 3D plant models using google-model-viewer, allowing 100% interactive viewing with rotation, zoom and info overlays.Integrated AI assistant 'Herba' with Gemini API for natural language plant query handling.`,
     technologies: [
       'AI Chatbot',
       'Shadcn UI',
@@ -61,7 +50,7 @@ export const projectsData = [
       'Express.js',
       'Node.js',
       'MERN Stack',
-      ],
+    ],
     links: {
       preview: 'https://naturescurezone.onrender.com/',
       github: 'hhttps://github.com/Saral224x2/naturescure',
@@ -84,7 +73,7 @@ export const projectsData = [
     ],
     links: {
       preview: 'https://www.jswpaints.in/shade',
-      // github: 'https://github.com/Yashkapure06/ec2-observe',
+      github: 'https://github.com/developer-umar?tab=repositories',
     },
   },
   {
@@ -101,8 +90,7 @@ export const projectsData = [
       'Express.js',
     ],
     links: {
-      preview:
-        '',
+      preview: 'https://github.com/Divyanshu4381/findure',
       github: 'https://github.com/Divyanshu4381/findure',
     },
   },
@@ -121,7 +109,7 @@ export const projectsData = [
       'JWT',
       'RESTful API',
       'Git',
-      'GitHub', 
+      'GitHub',
       'Node.js',
       'Express',
       'MongoDB',
@@ -131,274 +119,6 @@ export const projectsData = [
       github: 'https://github.com/developer-umar?tab=repositories',
     },
   },
-  // {
-  //   image: '/images/erp.png',
-  //   title: 'Shangrila Petition Platform',
-  //   description:
-  //     'A fully Functional MERN Stack Web Application. Having responsive behaviour, smooth touch UI with API Integration. With Admin and Petitioner Panel, along with new features such as Login in with QR Code, Signing In, Setting Global Threshold.',
-  //   technologies: ['React.js', 'Tailwind CSS', 'Node.js', 'Express', 'MongoDB'],
-  //   links: {
-  //     preview: 'https://github.com/Yashkapure06/Shangri-La-Petition-Platform',
-  //     github: 'https://github.com/Yashkapure06/Shangri-La-Petition-Platform',
-  //     githubApi: 'https://api.github.com/repos/Yashkapure06',
-  //   },
-  // },
-  // {
-  //   image: '/images/15.png',
-  //   title: 'The Kolorado Paints',
-  //   description:
-  //     'A fully Functional Next.js Based Frontend along with MERN Dashboard. Having responsive behaviour, smooth touch UI with API Integration. This project is for Artistic Content.',
-  //   technologies: ['Next.js', 'CSS3', 'React.js', 'MUI', 'SEO'],
-  //   links: {
-  //     preview: 'https://thekoloradopaints.com/',
-  //     github: 'https://github.com/Yashkapure06',
-  //     githubApi: 'https://api.github.com/repos/Yashkapure06',
-  //   },
-  // },
-  // {
-  //   image: '/images/13.png',
-  //   title: 'TechnoKraft',
-  //   description:
-  //     'A fully Functional Next.js Based Frontend along with MERN Dashboard. Having responsive behaviour, smooth touch UI with API Integration. This project is for Educational Content Provider',
-  //   technologies: ['Next.js', 'CSS3', 'React.js', 'MUI', 'SEO'],
-  //   links: {
-  //     preview: 'https://tts.net.in/',
-  //     github: 'https://github.com/Yashkapure06',
-  //     githubApi: 'https://api.github.com/repos/Yashkapure06',
-  //   },
-  // },
-  // {
-  //   image: '/images/16.png',
-  //   title: 'BEST GST Course',
-  //   description:
-  //     'A fully Functional Next.js Based Frontend along with MERN Dashboard. Having responsive behaviour, smooth touch UI with API Integration. This project also contains Payment Gateway Integration using Easebuzz. This is a GST Course Selling website.',
-  //   technologies: [
-  //     'Payment Gateway',
-  //     'Next.js',
-  //     'Tailwind CSS',
-  //     'React.js',
-  //     'MUI',
-  //     'SEO',
-  //   ],
-  //   links: {
-  //     preview: 'https://www.bestgstcourse.com/',
-  //     github: 'https://github.com/Yashkapure06',
-  //     githubApi: 'https://api.github.com/repos/Yashkapure06',
-  //   },
-  // },
-  // {
-  //   image: '/images/12.png',
-  //   title: 'Affinix Digital',
-  //   description:
-  //     'A fully Functional Next.js Based Frontend along with MERN Dashboard. Having responsive behaviour, smooth touch UI with API Integration. This project is for Best Digital Marketing Agency',
-  //   technologies: ['Next.js', 'Tailwind CSS', 'React.js', 'MUI', 'SEO'],
-  //   links: {
-  //     preview: 'https://affinixdigital.com/',
-  //     github: 'https://github.com/Yashkapure06',
-  //     githubApi: 'https://api.github.com/repos/Yashkapure06',
-  //   },
-  // },
-  // {
-  //   image: '/images/14.png',
-  //   title: 'Octane Apps',
-  //   description:
-  //     'A fully Functional Next.js Based Frontend along with MERN Dashboard. Having responsive behaviour, smooth touch UI with API Integration.',
-  //   technologies: ['Next.js', 'SCSS', 'CSS', 'React.js', 'MUI', 'SEO'],
-  //   links: {
-  //     preview: 'https://octaneapps.com/',
-  //     github: 'https://github.com/Yashkapure06',
-  //     githubApi: 'https://api.github.com/repos/Yashkapure06',
-  //   },
-  // },
-  // {
-  //   image: '/images/main.png',
-  //   title: "Dr. Manisha's Yoga Institute",
-  //   description:
-  //     'Created a MEVN Stack Web Application. Gave more than 180+ hours on this project. The project also includes admin panel along with CRUD Functionalities. Blogging System using Firebase.',
-  //   technologies: [
-  //     'Vue.js',
-  //     'Tailwind CSS',
-  //     'Vuex',
-  //     'MongoDB',
-  //     'Node-Express',
-  //     'Firebase',
-  //     'SEO',
-  //   ],
-  //   links: {
-  //     preview: 'https://www.drmanishasyogainstitute.com/',
-  //     github: 'https://github.com/Yashkapure06',
-  //     githubApi: 'https://api.github.com/repos/Yashkapure06',
-  //   },
-  // },
-  // {
-  //   image: '/images/1.png',
-  //   title: 'Anandlok Ayurveda',
-  //   description:
-  //     'Using ReactJs, Next.js, and Material-UI, I worked as an Intern for Anandlok Ayurveda & Panchakrma Hospital and created a website for Ayurveda & Panchakarma practitioners to share their knowledge and experience with others.',
-  //   technologies: ['Next.js', 'React.Js', 'CSS', 'Material-UI'],
-  //   links: {
-  //     preview: 'https://www.anandlokayurveda.com/',
-  //     github: 'https://github.com/Yashkapure06',
-  //     githubApi: 'https://api.github.com/repos/Yashkapure06',
-  //   },
-  // },
-  // {
-  //   image: '/images/news-o-pedia.png',
-  //   title: 'News-o-Pedia',
-  //   description:
-  //     'Using Vue.js I have created this news application having the main feature of Image Mapping, Used newsapi.org api to fetch the news from different parts of the world. Note: The API used works developers mode (i.e, locally. download it).',
-  //   technologies: ['Vue.js', 'CSS', 'NewsAPI.org'],
-  //   links: {
-  //     preview: 'https://news-o-pedia.netlify.app/',
-  //     github: 'https://github.com/Yashkapure06/News-O-Pedia',
-  //     githubApi: 'https://api.github.com/repos/Yashkapure06',
-  //   },
-  // },
-  // {
-  //   image: '/images/text-to-sppech.webp',
-  //   title: 'Select Text to Speech Chrome extention',
-  //   description:
-  //     "A simple chrome extension where you can select text, then right click and then select the option 'Read aloud' and you can hear the final audio.",
-  //   technologies: ['JavaScript'],
-  //   links: {
-  //     preview: 'https://github.com/Yashkapure06/TextToSpeech-ChromeExtension',
-  //     github: 'https://github.com/Yashkapure06/TextToSpeech-ChromeExtension',
-  //     githubApi: 'https://api.github.com/repos/Yashkapure06',
-  //   },
-  // },
-  // {
-  //   image: '/images/restro.png',
-  //   title: 'Restro - A Restaurent Website',
-  //   description:
-  //     'A simple and beautiful Restaurent Website made with Pure HTML, CSS and JS. With some beautiful Animation and data fetching using API.',
-  //   technologies: ['HTML', 'CSS', 'Javascript', 'API'],
-  //   links: {
-  //     preview: 'https://fynd-academy-mevn.vercel.app/',
-  //     github:
-  //       'https://github.com/Yashkapure06/fyndAcademy-MEVN/tree/master/Project3-HTML%2BCSS%2BJS',
-  //     githubApi: 'https://api.github.com/repos/Yashkapure06',
-  //   },
-  // },
-  // {
-  //   image: '/images/9.png',
-  //   title: 'OpenSource Contribution in Chakra-UI',
-  //   description:
-  //     'I created a portfolio website for my OpenSource contribution in Chakra-UI. This website is a collection of my contributions to the Chakra-UI community.',
-  //   technologies: ['Chakra-UI', 'React.Js', 'CSS'],
-  //   links: {
-  //     preview: 'https://chakra-ui.com/community/showcase',
-  //     github: 'https://github.com/Yashkapure06/awesome-chakra-ui',
-  //     githubApi: 'https://api.github.com/repos/Yashkapure06',
-  //   },
-  // },
-  // {
-  //   image: '/images/10.png',
-  //   title: 'Netflix Clone using ReactJs',
-  //   description:
-  //     'I created a Netflix clone using ReactJs and Sass. This is a clone of Netflix website. And played a lot with Api.',
-  //   technologies: ['React JS', 'SCSS', 'CSS', 'API'],
-  //   links: {
-  //     preview: 'https://netflix-clone-06.netlify.app/',
-  //     github: 'https://github.com/Yashkapure06/netflix-clone',
-  //     githubApi: 'https://api.github.com/repos/Yashkapure06',
-  //   },
-  // },
-  // {
-  //   image: '/images/11.png',
-  //   title: 'YouTube Clone using ReactJs',
-  //   description:
-  //     'I created a YouTube clone using ReactJs and Material UI. Used Rapid API to fetch data and learnt how to fetch data using API. The API used here was YouTube v3.',
-  //   technologies: ['ReactJs', 'CSS', 'Material-UI', 'API'],
-  //   links: {
-  //     preview: 'https://youtube-clone-06.netlify.app/',
-  //     github: 'https://github.com/Yashkapure06/youtube_clone',
-  //     githubApi: 'https://api.github.com/repos/Yashkapure06',
-  //   },
-  // },
-  // {
-  //   image: '/images/7.png',
-  //   title: 'Blogging Website',
-  //   description:
-  //     'This Blogging Website is made with NodeJs, Express and MongoDB. It is a simple blogging website where you can read, write, delete and edit your blog post.',
-  //   technologies: ['Nodejs', 'Express', 'CSS', 'MongoDB'],
-  //   links: {
-  //     preview: 'https://github.com/Yashkapure06/Blogging-Website',
-  //     github: 'https://github.com/Yashkapure06/Blogging-Website',
-  //     githubApi: 'https://api.github.com/repos/Yashkapure06',
-  //   },
-  // },
-  // {
-  //   image: '/images/8.png',
-  //   title: 'Personal Portfolio',
-  //   description:
-  //     'This is my personal portfolio website. I have made this with the help of NextJS + Its documents .You can see my projects, skills, and contact me over here as well.',
-  //   technologies: ['NextJs', 'MaterialUI'],
-  //   links: {
-  //     preview: 'https://yash-kapure.vercel.app/',
-  //     github: 'https://github.com/Yashkapure06/PersonalPortfolio',
-  //     githubApi: 'https://api.github.com/repos/Yashkapure06',
-  //   },
-  // },
-  // {
-  //   image: '/images/spacetalks.png',
-  //   title: 'Space Talks ✨',
-  //   description:
-  //     'This is a MERN Website. I have created this website using ReactJs, Material-UI, Nodejs, CSS, Express and MongoDB. This website is a platform for people to share their love and knowledge about space, universe, stars, galaxies and other planets with people from all over.',
-  //   technologies: ['ReactJs', 'Material-UI', 'Three.Js', 'MongoDB'],
-  //   links: {
-  //     preview: 'https://space-talks.netlify.app/',
-  //     github: 'https://github.com/Yashkapure06/Space-Talks-MERN',
-  //     githubApi: 'https://api.github.com/repos/Yashkapure06',
-  //   },
-  // },
-  // {
-  //   image: '/images/4.png',
-  //   title: 'Personal Portfolio',
-  //   description:
-  //     'This is My 1st Portfolio Website. I Made this with ReactJS while Learning ReactJS. A lots of CSS is Used for Animation. I have also added the feature of Dark & Light Mode',
-  //   technologies: ['React', 'CSS3', 'JavaScript'],
-  //   links: {
-  //     preview: 'https://yashkapure-portfolio.web.app/',
-  //     github: 'https://github.com/Yashkapure06/PersonalPortfolio2',
-  //     githubApi: 'https://api.github.com/repos/Yashkapure06',
-  //   },
-  // },
-  // {
-  //   image: '/images/6.png',
-  //   title: 'Movie WebApp',
-  //   description:
-  //     'A Simple Movie App Using Pure ReactJs - made for just revision purpose',
-  //   technologies: ['React', 'CSS3', 'JavaScript', 'API'],
-  //   links: {
-  //     preview: 'https://react-movie-app-yash.netlify.app/',
-  //     github: 'https://github.com/Yashkapure06/Movie-App',
-  //     githubApi: 'https://api.github.com/repos/Yashkapure06',
-  //   },
-  // },
-  // {
-  //   image: '/images/3.png',
-  //   title: 'Complete React Website',
-  //   description:
-  //     'I made this whole website from scratch with latest versions of React. This Complete Demo Website is Made using ReactJs, HTML, CSS. This website is a complete demo website which includes all the components of ReactJs.',
-  //   technologies: ['React', 'CSS3'],
-  //   links: {
-  //     preview: 'https://reactwebsite-3b247.web.app/',
-  //     github: 'https://github.com/Yashkapure06/React-Website',
-  //     githubApi: 'https://api.github.com/repos/Yashkapure06',
-  //   },
-  // },
-  // {
-  //   image: '/images/5.png',
-  //   title: 'Wedding Invitation Website',
-  //   description:
-  //     'This Website is purely made with HTML, CSS and mainly JS. You Will find some Beautiful animations in this website. Some Special Features are also added in this website, please visit and check.',
-  //   technologies: ['HTML', 'CSS', 'JS'],
-  //   links: {
-  //     preview: 'https://harshal-nandani.web.app/',
-  //     github: 'https://github.com/Yashkapure06/Wedding-Website',
-  //     githubApi: 'https://api.github.com/repos/Yashkapure06',
-  //   },
-  // },
 ] as const;
 
 export const experiencesData = [
@@ -423,122 +143,8 @@ export const experiencesData = [
       'Git',
       'GitHub',
       'render',
-     
-      
-      'Motion Design',
     ],
   },
-  // {
-  //   title: 'Full Stack Developer',
-  //   company: 'Dragon Sino Group, United Kingdom',
-  //   description:
-  //     'Worked as a Full Stack developer at Dragon Sino Group, a Chinese company operating in the United Kingdom. Created fully functional MERN Stack Web Applications with responsive behavior, smooth touch UI, and API Integration.',
-  //   period: '2024 - 2025',
-  //   technologies: [
-  //     'TypeScript',
-  //     'React.js',
-  //     'Next.js',
-  //     'Tailwind CSS',
-  //     'Node.js',
-  //     'Express',
-  //     'Express',
-  //     'TypeScript',
-  //     'Tailwind CSS',
-  //     'API Integration',
-  //     'MERN Stack',
-  //     'RESTful API',
-  //     'PHP',
-  //     'MySQL',
-  //   ],
-  // },
-  // {
-  //   title: 'Frontend Developer (React.js)',
-  //   company: 'Octane Apps, Remote',
-  //   description:
-  //     'Worked as a Frontend Developer specializing in React.js at Octane Apps. Created fully functional Next.js based frontends with MERN dashboards, focusing on responsive design and smooth user interfaces.',
-  //   period: '2023 - 2024',
-  //   technologies: [
-  //     'Next.js',
-  //     'React.js',
-  //     'SCSS',
-  //     'CSS',
-  //     'MUI',
-  //     'SEO',
-  //     'Payment Gateway',
-  //     'API Integration',
-  //     'RESTful API',
-  //     'MERN Stack',
-  //     'Node.js',
-  //     'MongoDB',
-  //     'Express',
-  //     'TypeScript',
-  //     'Tailwind CSS',
-  //     'Firebase',
-  //   ],
-  // },
-  // {
-  //   title: 'Frontend Developer (Full-Stack - Next.js)',
-  //   company: 'Anandlok Ayurveda & Panchakarma Hospital, Nagpur',
-  //   description:
-  //     'Worked as an FUll Stack Developer Frontend Focused, creating a website for Ayurveda & Panchakarma practitioners using React.js, Next.js, and Material-UI. The platform allows practitioners to share their knowledge and experience with others.',
-  //   period: '2021-2023',
-  //   technologies: [
-  //     'Next.js',
-  //     'React.js',
-  //     'CSS',
-  //     'Material-UI',
-  //     'SEO',
-  //     'Node.js',
-  //     'MongoDB',
-  //     'Express',
-  //     'TypeScript',
-  //     'Tailwind CSS',
-  //     'Firebase',
-  //     'API Integration',
-  //     'MERN Stack',
-  //     'RESTful API',
-  //   ],
-  // },
-  // {
-  //   title: 'Full Stack Vue.js Developer',
-  //   company: 'Dr. Manisha&apos;s Yoga Institute, Pune',
-  //   description: (
-  //     <>
-  //       Created a comprehensive MEVN Stack Web Application for Dr.
-  //       Manisha&apos;s Yoga Institute, investing over 180+ hours in development.
-  //       The project includes an admin panel with CRUD functionalities and a
-  //       blogging system using Firebase. The platform serves as a digital space
-  //       for yoga practitioners and students.
-  //     </>
-  //   ),
-  //   period: '2022 - 2023',
-  //   technologies: [
-  //     'Vue.js',
-  //     'Tailwind CSS',
-  //     'Vuex',
-  //     'MongoDB',
-  //     'Node-Express',
-  //     'Firebase',
-  //     'SEO',
-  //   ],
-  // },
-  // {
-  //   title: 'Freelance Full Stack Developer',
-  //   company: 'Self-Employed, Remote',
-  //   description:
-  //     'Working as a freelance Full Stack Developer, specializing in MERN/MEVN stack development. Creating responsive web applications, e-commerce platforms, and custom solutions for various clients. Available for hire at $35/hr, may vary depending on the project. And flexible working hours.',
-  //   period: '2020 - Present',
-  //   technologies: [
-  //     'React.js',
-  //     'Next.js',
-  //     'Vue.js',
-  //     'Node.js',
-  //     'MongoDB',
-  //     'Express',
-  //     'TypeScript',
-  //     'Tailwind CSS',
-  //   ],
-  // },
 ] as const;
 
 export const skillsData = [
@@ -553,5 +159,3 @@ export const skillsData = [
   { icon: <Icons.nestjs className="size-12" /> },
   { icon: <Icons.docker className="size-12" /> },
 ] as const;
-
-

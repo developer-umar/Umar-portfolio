@@ -1,9 +1,9 @@
 'use client';
 
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
 
 import { Button } from './button';
 import { Icons } from './icons';
@@ -34,8 +34,6 @@ const fadeInAnimationVariants = {
 export const Project = ({ project, index }: TProps) => {
   const { image, title, description, technologies, links } = project;
   const [showMore, setShowMore] = useState(false);
-
-  // Limit description to approx. 4 lines (around 220 chars)
   const isLong = description.length > 220;
   const shortDesc = isLong ? description.slice(0, 220) + '...' : description;
 
@@ -66,20 +64,20 @@ export const Project = ({ project, index }: TProps) => {
 
       <h3 className="mt-3 text-xl font-semibold">{title}</h3>
 
-      <p className="text-muted-foreground mb-2 mt-1 text-sm sm:text-base leading-relaxed">
+      <p className="text-muted-foreground mb-2 mt-1 text-sm leading-relaxed sm:text-base">
         {showMore ? description : shortDesc}
       </p>
 
       {isLong && (
         <button
           onClick={() => setShowMore(!showMore)}
-          className="text-blue-500 hover:text-blue-700 text-sm font-medium mb-3 self-start"
+          className="mb-3 self-start text-sm font-medium text-blue-500 hover:text-blue-700"
         >
           {showMore ? 'See Less ▲' : 'See More ▼'}
         </button>
       )}
 
-      <div className="flex flex-wrap gap-2 mb-3">
+      <div className="mb-3 flex flex-wrap gap-2">
         {technologies.map((tech) => (
           <span
             key={tech}
@@ -90,7 +88,12 @@ export const Project = ({ project, index }: TProps) => {
         ))}
       </div>
 
-      <Link href={links.preview} aria-label={title} target="_blank" className="mt-auto w-fit">
+      <Link
+        href={links.preview}
+        aria-label={title}
+        target="_blank"
+        className="mt-auto w-fit"
+      >
         <Button variant="outline" size="sm" className="flex items-center gap-2">
           <Icons.preview className="size-4" />
           Preview

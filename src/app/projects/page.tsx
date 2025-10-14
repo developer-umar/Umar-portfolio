@@ -8,7 +8,6 @@ import { Breadcrumb } from '@/components/breadcrumb';
 import { Button } from '@/components/button';
 import { Icons } from '@/components/icons';
 import { projectsData } from '@/lib/data';
-
 export default function ProjectsPage() {
   return (
     <div className="container mx-auto px-4 py-16">
@@ -41,7 +40,6 @@ export default function ProjectsPage() {
           frontend and full-stack development.
         </p>
       </motion.div>
-
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {projectsData.map((project, index) => (
           <motion.div
