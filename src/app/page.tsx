@@ -1,5 +1,6 @@
 'use client';
 import { useTheme } from 'next-themes';
+
 import About from '@/components/about';
 import CertificatesPage from '@/components/certificates';
 import Contact from '@/components/contact';

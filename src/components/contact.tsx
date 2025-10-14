@@ -1,8 +1,9 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { toast } from 'sonner';
+
 import { Button } from '@/components/button';
 import { Icons } from '@/components/icons';
 import { SectionHeading } from '@/components/section-heading';
@@ -66,7 +67,7 @@ export default function Contact() {
       <form
         ref={formRef}
         onSubmit={handleSubmit}
-        className="flex flex-col items-center gap-5 mt-8 w-full max-w-xl mx-auto"
+        className="mx-auto mt-8 flex w-full max-w-xl flex-col items-center gap-5"
       >
         {/* Name */}
         <div className="w-full">
@@ -79,7 +80,7 @@ export default function Contact() {
             name="name"
             placeholder="Your Name"
             required
-            className="mt-2 h-10 w-full rounded-md border px-3 py-2 text-sm border-input bg-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring"
+            className="border-input bg-background placeholder:text-muted-foreground focus:ring-ring mt-2 h-10 w-full rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-offset-2"
           />
         </div>
 
@@ -94,7 +95,7 @@ export default function Contact() {
             name="email"
             placeholder="hello@gmail.com"
             required
-            className="mt-2 h-10 w-full rounded-md border px-3 py-2 text-sm border-input bg-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring"
+            className="border-input bg-background placeholder:text-muted-foreground focus:ring-ring mt-2 h-10 w-full rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-offset-2"
           />
         </div>
 
@@ -108,14 +109,14 @@ export default function Contact() {
             name="message"
             placeholder="Hello! What's up?"
             required
-            className="mt-2 h-60 w-full resize-none rounded-md border px-3 py-2 text-sm border-input bg-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring"
+            className="border-input bg-background placeholder:text-muted-foreground focus:ring-ring mt-2 h-60 w-full resize-none rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-offset-2"
           />
         </div>
 
         {/* Submit Button */}
         <Button type="submit" size="lg" disabled={submitting}>
           {submitting ? 'Sending...' : 'Send Message'}
-          <Icons.arrowRight className="ml-2 h-4 w-4" />
+          <Icons.arrowRight className="ml-2 size-4" />
         </Button>
       </form>
     </motion.section>
