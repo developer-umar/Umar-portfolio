@@ -1,7 +1,7 @@
 import '@/styles/globals.css';
 
 import { PropsWithChildren } from 'react';
-import type { Metadata } from 'next';
+// import type { Metadata } from 'next';
 import Script from 'next/script';
 
 import { ActiveSectionProvider } from '@/components/active-section-provider';
