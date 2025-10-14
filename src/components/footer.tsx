@@ -5,7 +5,7 @@ export const Footer = () => {
     <footer className="text-muted-foreground my-2 text-sm">
       © {new Date().getFullYear()}{' '}
       <Button variant="link" className="text-muted-foreground p-0 font-medium">
-        <a href="https://github.com/Yashkapure06">Yash Kapure</a>
+        <a href="https://github.com/developer-umar">mohammad umar</a>
       </Button>
       . All rights reserved.
     </footer>
