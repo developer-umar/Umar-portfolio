@@ -11,60 +11,60 @@ import { fonts } from '@/lib/fonts';
 import { siteConfig } from '@/lib/site-config';
 import { cn } from '@/lib/utils';
 
-export const metadata: Metadata = {
-  metadataBase: new URL(siteConfig.url),
-  title: {
-    default: siteConfig.title,
-    template: `%s | ${siteConfig.title}`,
-  },
-  description: siteConfig.description,
-  keywords: siteConfig.keywords.join(', '),
-  robots: { index: true, follow: true },
-  icons: {
-    icon: '/favicon/favicon.ico',
-    shortcut: '/favicon/favicon-16x16.png',
-    apple: '/favicon/apple-touch-icon.png',
-  },
-  verification: {
-    google: siteConfig.googleSiteVerificationId,
-  },
-  openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    url: siteConfig.url,
-    title: siteConfig.title,
-    description: siteConfig.description,
-    siteName: 'Mohammad Umar Portfolio',
-    images: [
-      {
-        url: `${siteConfig.url}/images/metaimg.png`,
-        width: 1200,
-        height: 630,
-        alt: 'Mohammad Umar - MERN Stack Developer',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: siteConfig.title,
-    description: siteConfig.description,
-    creator: '@MohammadUmar',
-    images: [`${siteConfig.url}/images/metaimg.png`],
-  },
-  authors: [
-    { name: 'Mohammad  Umar', url: 'https://www.github.com/developer-umar' },
-  ],
-  creator: 'Mohammad Umar',
-  publisher: 'Mohammad Umar',
-  alternates: {
-    canonical: siteConfig.url,
-  },
-  other: {
-    author: 'Mohammad  Umar',
-    email: 'mohammadumar8010@gmail.com',
-    copyright: 'Mohammad Umar 2023',
-  },
-};
+// export const metadata: Metadata = {
+//   metadataBase: new URL(siteConfig.url),
+//   title: {
+//     default: siteConfig.title,
+//     template: `%s | ${siteConfig.title}`,
+//   },
+//   description: siteConfig.description,
+//   keywords: siteConfig.keywords.join(', '),
+//   robots: { index: true, follow: true },
+//   icons: {
+//     icon: '/favicon/favicon.ico',
+//     shortcut: '/favicon/favicon-16x16.png',
+//     apple: '/favicon/apple-touch-icon.png',
+//   },
+//   verification: {
+//     google: siteConfig.googleSiteVerificationId,
+//   },
+//   openGraph: {
+//     type: 'website',
+//     locale: 'en_US',
+//     url: siteConfig.url,
+//     title: siteConfig.title,
+//     description: siteConfig.description,
+//     siteName: 'Mohammad Umar Portfolio',
+//     images: [
+//       {
+//         url: `${siteConfig.url}/images/metaimg.png`,
+//         width: 1200,
+//         height: 630,
+//         alt: 'Mohammad Umar - MERN Stack Developer',
+//       },
+//     ],
+//   },
+//   twitter: {
+//     card: 'summary_large_image',
+//     title: siteConfig.title,
+//     description: siteConfig.description,
+//     creator: '@MohammadUmar',
+//     images: [`${siteConfig.url}/images/metaimg.png`],
+//   },
+//   authors: [
+//     { name: 'Mohammad  Umar', url: 'https://www.github.com/developer-umar' },
+//   ],
+//   creator: 'Mohammad Umar',
+//   publisher: 'Mohammad Umar',
+//   alternates: {
+//     canonical: siteConfig.url,
+//   },
+//   other: {
+//     author: 'Mohammad  Umar',
+//     email: 'mohammadumar8010@gmail.com',
+//     copyright: 'Mohammad Umar 2023',
+//   },
+// };
 
 const RootLayout = ({ children }: PropsWithChildren) => {
   const structuredData = {
