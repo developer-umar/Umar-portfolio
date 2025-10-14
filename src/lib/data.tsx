@@ -90,8 +90,8 @@ export const projectsData = [
       'Express.js',
     ],
     links: {
-      preview: 'https://github.com/Divyanshu4381/findure',
-      github: 'https://github.com/Divyanshu4381/findure',
+      preview: 'https://github.com/developer-umar/findureBackend',
+      github: 'https://github.com/developer-umar/findureBackend',
     },
   },
   {
