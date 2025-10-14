@@ -26,7 +26,7 @@ export default function Intro() {
         <Image
           src="/images/fav1_4.jpeg"
           alt="Mohammad Umar"
-          width={144} // 36*4px
+          width={144}
           height={144}
           className="rounded-full object-cover grayscale transition-all duration-300 hover:scale-105 hover:grayscale-0"
         />
@@ -41,9 +41,9 @@ export default function Intro() {
           href="#contact"
           className="flex items-center gap-3 rounded border px-3 py-1"
         >
-          <span className="relative flex h-2 w-2">
-            <span className="absolute flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
-            <span className="relative flex h-2 w-2 rounded-full bg-green-400" />
+          <span className="relative flex size-2">
+            <span className="absolute flex size-full animate-ping rounded-full bg-green-400 opacity-75" />
+            <span className="relative flex size-2 rounded-full bg-green-400" />
           </span>
           <span className="font-mono text-sm">Available for work!</span>
         </Link>
@@ -67,7 +67,12 @@ export default function Intro() {
         transition={{ delay: 0.1 }}
         className="text-muted-foreground max-w-xl"
       >
-        I am a Proficient MERN Stack Developer focused on high-performance solutions. I architect scalable backends (Node.js/Express/MongoDB), ensuring secure JWT authentication and robust API integration. Concurrently, I craft fast, SEO-friendly UIs using Next.js, React.js, and Tailwind CSS, delivering complete, clean-coded systems with a commitment to full-stack excellence.
+        I am a Proficient MERN Stack Developer focused on high-performance
+        solutions. I architect scalable backends (Node.js/Express/MongoDB),
+        ensuring secure JWT authentication and robust API integration.
+        Concurrently, I craft fast, SEO-friendly UIs using Next.js, React.js,
+        and Tailwind CSS, delivering complete, clean-coded systems with a
+        commitment to full-stack excellence.
       </motion.p>
 
       <motion.div
@@ -78,52 +83,53 @@ export default function Intro() {
       >
         <Button asChild size="lg">
           <Link href="#contact">
-            Get in touch <Icons.arrowRight className="ml-2 h-4 w-4" />
+            Get in touch <Icons.arrowRight className="ml-2 size-4" />
           </Link>
         </Button>
+
         <Button variant="outline" size="lg" className="hidden sm:flex" asChild>
-          <a
-            href="/cv/Umar_CV.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Download CV <Icons.download className="ml-2 h-4 w-4" />
+          <a href="/cv/Umar_CV.pdf" target="_blank" rel="noopener noreferrer">
+            Download CV <Icons.download className="ml-2 size-4" />
           </a>
         </Button>
+
         <Button variant="outline" size="icon" asChild>
           <Link
             href="https://www.linkedin.com/in/umar15dev"
             aria-label="Linkedin"
             target="_blank"
           >
-            <Icons.linkedin className="h-5 w-5" />
+            <Icons.linkedin className="size-5" />
           </Link>
         </Button>
+
         <Button variant="outline" size="icon" asChild>
           <Link
             href="https://www.github.com/developer-umar"
             aria-label="Github"
             target="_blank"
           >
-            <Icons.github className="h-5 w-5" />
+            <Icons.github className="size-5" />
           </Link>
         </Button>
+
         <Button variant="outline" size="icon" asChild>
           <Link
             href="https://www.instagram.com/_umar_md_1"
             aria-label="Instagram"
             target="_blank"
           >
-            <Icons.instagram className="h-5 w-5" />
+            <Icons.instagram className="size-5" />
           </Link>
         </Button>
+
         <Button variant="outline" size="icon" asChild>
           <Link
             href="https://x.com/mdumar9140"
             aria-label="Twitter"
             target="_blank"
           >
-            <Icons.twitter className="h-5 w-5" />
+            <Icons.twitter className="size-5" />
           </Link>
         </Button>
       </motion.div>
