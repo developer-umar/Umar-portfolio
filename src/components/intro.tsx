@@ -54,7 +54,7 @@ export default function Intro() {
         animate={{ opacity: 1, y: 0 }}
         className="font-heading max-w-3xl text-4xl font-extrabold md:text-5xl"
       >
-        Hi I'm{' '}
+        {"Hi, I'm "}{' '}
         <span className="bg-gradient-to-r from-rose-700 to-pink-600 bg-clip-text text-transparent">
           Mohammad Umar
         </span>{' '}
