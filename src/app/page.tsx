@@ -1,14 +1,13 @@
 'use client';
 import { useTheme } from 'next-themes';
-
-import { About } from '@/components/about';
+import About from '@/components/about';
 import CertificatesPage from '@/components/certificates';
-import { Contact } from '@/components/contact';
+import Contact from '@/components/contact';
 import { EducationSection } from '@/components/education';
-import { Experience } from '@/components/experience';
+import Experience from '@/components/experience';
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
-import { Intro } from '@/components/intro';
+import Intro from '@/components/intro';
 import { Projects } from '@/components/projects';
 import { SectionDivider } from '@/components/section-divider';
 import { ThemeToggle } from '@/components/theme-toggle';

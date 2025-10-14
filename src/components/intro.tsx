@@ -1,13 +1,14 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import Link from 'next/link';
 
 import { Button } from '@/components/button';
 import { Icons } from '@/components/icons';
 import { useSectionInView } from '@/hooks/use-section-in-view';
 
-export const Intro = () => {
+export default function Intro() {
   const { ref } = useSectionInView('Home');
 
   return (
@@ -19,69 +20,65 @@ export const Intro = () => {
       <motion.div
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{
-          type: 'tween',
-          duration: 0.2,
-        }}
+        transition={{ type: 'tween', duration: 0.2 }}
         className="mb-8"
       >
-        <img
+        <Image
           src="/images/fav1_4.jpeg"
           alt="Mohammad Umar"
-          className="size-36 rounded-full object-cover grayscale transition-all duration-300 hover:scale-105 hover:grayscale-0"
+          width={144} // 36*4px
+          height={144}
+          className="rounded-full object-cover grayscale transition-all duration-300 hover:scale-105 hover:grayscale-0"
         />
       </motion.div>
+
       <motion.div
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{
-          type: 'tween',
-          duration: 0.2,
-        }}
+        transition={{ type: 'tween', duration: 0.2 }}
       >
         <Link
           href="#contact"
           className="flex items-center gap-3 rounded border px-3 py-1"
         >
-          <span className="relative flex size-2">
-            <span className="absolute flex size-full animate-ping rounded-full bg-green-400 opacity-75"></span>
-            <span className="relative flex size-2 rounded-full bg-green-400"></span>
+          <span className="relative flex h-2 w-2">
+            <span className="absolute flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
+            <span className="relative flex h-2 w-2 rounded-full bg-green-400" />
           </span>
           <span className="font-mono text-sm">Available for work!</span>
         </Link>
       </motion.div>
+
       <motion.h1
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         className="font-heading max-w-3xl text-4xl font-extrabold md:text-5xl"
       >
-        Hi I&#39;m
+        Hi I'm{' '}
         <span className="bg-gradient-to-r from-rose-700 to-pink-600 bg-clip-text text-transparent">
           Mohammad Umar
-        </span>
+        </span>{' '}
         - MERN Stack Developer.
       </motion.h1>
+
       <motion.p
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.1,
-        }}
+        transition={{ delay: 0.1 }}
         className="text-muted-foreground max-w-xl"
       >
-        I am a Proficient MERN Stack Developer focused on high-performance solutions. I architect scalable backends (Node.js/Express/MongoDB), ensuring secure JWT authentication and robust API integration. Concurrently, I craft fast, SEO-friendly UIs using Next.js, React.js, and Tailwind CSS, delivering complete, clean-coded systems with a commitment to both full-stack excellence.
+        I am a Proficient MERN Stack Developer focused on high-performance solutions. I architect scalable backends (Node.js/Express/MongoDB), ensuring secure JWT authentication and robust API integration. Concurrently, I craft fast, SEO-friendly UIs using Next.js, React.js, and Tailwind CSS, delivering complete, clean-coded systems with a commitment to full-stack excellence.
       </motion.p>
+
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.1,
-        }}
+        transition={{ delay: 0.1 }}
         className="flex flex-row gap-2"
       >
         <Button asChild size="lg">
           <Link href="#contact">
-            Get in touch <Icons.arrowRight className="ml-2 size-4" />
+            Get in touch <Icons.arrowRight className="ml-2 h-4 w-4" />
           </Link>
         </Button>
         <Button variant="outline" size="lg" className="hidden sm:flex" asChild>
@@ -90,7 +87,7 @@ export const Intro = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Download CV <Icons.download className="ml-2 size-4" />
+            Download CV <Icons.download className="ml-2 h-4 w-4" />
           </a>
         </Button>
         <Button variant="outline" size="icon" asChild>
@@ -99,7 +96,7 @@ export const Intro = () => {
             aria-label="Linkedin"
             target="_blank"
           >
-            <Icons.linkedin className="size-5" />
+            <Icons.linkedin className="h-5 w-5" />
           </Link>
         </Button>
         <Button variant="outline" size="icon" asChild>
@@ -108,7 +105,7 @@ export const Intro = () => {
             aria-label="Github"
             target="_blank"
           >
-            <Icons.github className="size-5" />
+            <Icons.github className="h-5 w-5" />
           </Link>
         </Button>
         <Button variant="outline" size="icon" asChild>
@@ -117,7 +114,7 @@ export const Intro = () => {
             aria-label="Instagram"
             target="_blank"
           >
-            <Icons.instagram className="size-5" />
+            <Icons.instagram className="h-5 w-5" />
           </Link>
         </Button>
         <Button variant="outline" size="icon" asChild>
@@ -126,10 +123,10 @@ export const Intro = () => {
             aria-label="Twitter"
             target="_blank"
           >
-            <Icons.twitter className="size-5" />
+            <Icons.twitter className="h-5 w-5" />
           </Link>
         </Button>
       </motion.div>
     </section>
   );
-};
+}

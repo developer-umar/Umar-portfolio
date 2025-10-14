@@ -3,13 +3,12 @@
 import { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { toast } from 'sonner';
-
 import { Button } from '@/components/button';
 import { Icons } from '@/components/icons';
 import { SectionHeading } from '@/components/section-heading';
 import { useSectionInView } from '@/hooks/use-section-in-view';
 
-export const Contact = () => {
+export default function Contact() {
   const { ref } = useSectionInView('Contact');
   const formRef = useRef<HTMLFormElement>(null);
   const [submitting, setSubmitting] = useState(false);
@@ -33,9 +32,10 @@ export const Contact = () => {
       });
 
       const result = await res.json();
+
       if (result.success) {
         toast.success('Message sent successfully!');
-        if (formRef.current) formRef.current.reset();
+        formRef.current?.reset();
       } else {
         toast.error(result.error || 'Failed to send message.');
         console.error(result.error);
@@ -60,11 +60,7 @@ export const Contact = () => {
     >
       <SectionHeading
         heading="Get In Touch"
-        content={
-          <>
-            Fill out the form below and I'll get back to you as soon as possible.
-          </>
-        }
+        content="Fill out the form below and I'll get back to you as soon as possible."
       />
 
       <form
@@ -113,15 +109,15 @@ export const Contact = () => {
             placeholder="Hello! What's up?"
             required
             className="mt-2 h-60 w-full resize-none rounded-md border px-3 py-2 text-sm border-input bg-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ring"
-          ></textarea>
+          />
         </div>
 
         {/* Submit Button */}
         <Button type="submit" size="lg" disabled={submitting}>
           {submitting ? 'Sending...' : 'Send Message'}
-          <Icons.arrowRight className="ml-2 size-4" />
+          <Icons.arrowRight className="ml-2 h-4 w-4" />
         </Button>
       </form>
     </motion.section>
   );
-};
+}

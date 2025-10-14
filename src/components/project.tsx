@@ -73,7 +73,7 @@ export const Project = ({ project, index }: TProps) => {
           onClick={() => setShowMore(!showMore)}
           className="mb-3 self-start text-sm font-medium text-blue-500 hover:text-blue-700"
         >
-          {showMore ? 'See Less ▲' : 'See More ▼'}
+          {showMore ? 'See Less' : 'See More'}
         </button>
       )}
 
