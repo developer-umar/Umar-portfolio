@@ -4,11 +4,11 @@ import { ActiveSectionProvider } from "@/components/active-section-provider";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/toaster";
 import { fonts } from "@/lib/fonts";
-import { siteConfig } from "@/lib/site-config";
+// import { siteConfig } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
 
 const RootLayout = ({ children }: PropsWithChildren) => {
-  const siteUrl = siteConfig.url || "https://umar-portfolio-teal.vercel.app";
+  const siteUrl =  "https://umar-portfolio-teal.vercel.app";
 
   // Styled 'U' that looks like a logo
   const logoText = "🌀 𝗨";
