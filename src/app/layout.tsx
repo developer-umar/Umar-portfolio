@@ -10,7 +10,7 @@ import { cn } from '@/lib/utils';
 
 const RootLayout = ({ children }: PropsWithChildren) => {
   const siteUrl = 'https://umar-portfolio-teal.vercel.app';
-  const logoPath = `${siteUrl}/favicon/logo.ico`;
+  const logoPath = `${siteUrl}/favicon/logo.png`;
 
   const structuredData = [
     {
@@ -67,7 +67,7 @@ const RootLayout = ({ children }: PropsWithChildren) => {
         <meta name="theme-color" content="#0ea5a4" />
 
         {/* Favicons / icons */}
-        <link rel="icon" href="/favicon/logo.ico" />
+        <link rel="icon" href="/favicon/logo.png" />
 
         {/* Open Graph (rich link preview) */}
         <meta property="og:type" content="website" />
