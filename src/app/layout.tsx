@@ -6,16 +6,15 @@ import { Toaster } from "@/components/toaster";
 import { fonts } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
 
+// ✅ Ye naya Next.js metadata system hai
 export const metadata = {
   title: "🌀 Umar | MERN Stack Developer",
   description:
     "Mohammad Umar — MERN Stack Developer building responsive and scalable web apps using React, Next.js, Node.js and MongoDB.",
   keywords:
     "MERN Developer, React Developer, Next.js, Node.js, MongoDB, Full Stack Developer, Frontend Developer India",
-  authors: [{ name: "Mohammad Umar" }],
-  themeColor: "#0ea5a4",
+  author: "Mohammad Umar",
   openGraph: {
-    type: "website",
     title: "🌀 Umar | MERN Stack Developer",
     description:
       "MERN Stack Developer building scalable and responsive web applications using React, Next.js, Node.js and MongoDB.",
@@ -26,9 +25,9 @@ export const metadata = {
         url: "https://dummyimage.com/600x400/0ea5a4/ffffff&text=U",
         width: 600,
         height: 400,
-        alt: "Umar | MERN Stack Developer",
       },
     ],
+    type: "website",
   },
   twitter: {
     card: "summary_large_image",
@@ -39,30 +38,7 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({ children }: PropsWithChildren) {
-  const structuredData = [
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      name: "Mohammad Umar",
-      jobTitle: "MERN Stack Developer | Frontend & Backend",
-      url: "https://umar-portfolio-teal.vercel.app",
-      description:
-        "Mohammad Umar — MERN Stack Developer building responsive and scalable web apps using React, Next.js, Node.js and MongoDB.",
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      name: "Umar | MERN Stack Developer",
-      url: "https://umar-portfolio-teal.vercel.app",
-      potentialAction: {
-        "@type": "SearchAction",
-        target: "https://umar-portfolio-teal.vercel.app/?s={search_term_string}",
-        "query-input": "required name=search_term_string",
-      },
-    },
-  ];
-
+const RootLayout = ({ children }: PropsWithChildren) => {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={cn("min-h-screen font-sans", fonts)}>
@@ -72,13 +48,9 @@ export default function RootLayout({ children }: PropsWithChildren) {
             <Toaster position="bottom-left" />
           </ActiveSectionProvider>
         </ThemeProvider>
-
-        {/* ✅ SEO structured data (Google schema) */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;
