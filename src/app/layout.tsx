@@ -1,10 +1,12 @@
 import '@/styles/globals.css';
+
 import { PropsWithChildren } from 'react';
+
 import { ActiveSectionProvider } from '@/components/active-section-provider';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Toaster } from '@/components/toaster';
-import { cn } from '@/lib/utils';
 import { fonts } from '@/lib/fonts';
+import { cn } from '@/lib/utils';
 
 const RootLayout = ({ children }: PropsWithChildren) => {
   const siteUrl = 'https://umar-portfolio-teal.vercel.app';
