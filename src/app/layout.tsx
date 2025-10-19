@@ -1,215 +1,92 @@
-import '@/styles/globals.css';
-
-import { PropsWithChildren } from 'react';
-// import type { Metadata } from 'next';
-import Script from 'next/script';
-
-import { ActiveSectionProvider } from '@/components/active-section-provider';
-import { ThemeProvider } from '@/components/theme-provider';
-import { Toaster } from '@/components/toaster';
-import { fonts } from '@/lib/fonts';
-import { siteConfig } from '@/lib/site-config';
-import { cn } from '@/lib/utils';
-
-// export const metadata: Metadata = {
-//   metadataBase: new URL(siteConfig.url),
-//   title: {
-//     default: siteConfig.title,
-//     template: `%s | ${siteConfig.title}`,
-//   },
-//   description: siteConfig.description,
-//   keywords: siteConfig.keywords.join(', '),
-//   robots: { index: true, follow: true },
-//   icons: {
-//     icon: '/favicon/favicon.ico',
-//     shortcut: '/favicon/favicon-16x16.png',
-//     apple: '/favicon/apple-touch-icon.png',
-//   },
-//   verification: {
-//     google: siteConfig.googleSiteVerificationId,
-//   },
-//   openGraph: {
-//     type: 'website',
-//     locale: 'en_US',
-//     url: siteConfig.url,
-//     title: siteConfig.title,
-//     description: siteConfig.description,
-//     siteName: 'Mohammad Umar Portfolio',
-//     images: [
-//       {
-//         url: `${siteConfig.url}/images/metaimg.png`,
-//         width: 1200,
-//         height: 630,
-//         alt: 'Mohammad Umar - MERN Stack Developer',
-//       },
-//     ],
-//   },
-//   twitter: {
-//     card: 'summary_large_image',
-//     title: siteConfig.title,
-//     description: siteConfig.description,
-//     creator: '@MohammadUmar',
-//     images: [`${siteConfig.url}/images/metaimg.png`],
-//   },
-//   authors: [
-//     { name: 'Mohammad  Umar', url: 'https://www.github.com/developer-umar' },
-//   ],
-//   creator: 'Mohammad Umar',
-//   publisher: 'Mohammad Umar',
-//   alternates: {
-//     canonical: siteConfig.url,
-//   },
-//   other: {
-//     author: 'Mohammad  Umar',
-//     email: 'mohammadumar8010@gmail.com',
-//     copyright: 'Mohammad Umar 2023',
-//   },
-// };
+import "@/styles/globals.css";
+import { PropsWithChildren } from "react";
+import { ActiveSectionProvider } from "@/components/active-section-provider";
+import { ThemeProvider } from "@/components/theme-provider";
+import { Toaster } from "@/components/toaster";
+import { fonts } from "@/lib/fonts";
+import { siteConfig } from "@/lib/site-config";
+import { cn } from "@/lib/utils";
 
 const RootLayout = ({ children }: PropsWithChildren) => {
-  const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'Person',
-    name: 'Mohammad  Umar',
-    alternateName: 'MOhammad Umar',
-    jobTitle: 'MERN stack developer & Full Stack Developer',
-    description:
-      'Hi there! My name is Umar and I am a programmer with a passion for learning and exploring new technologies. With a strong background in full-stack development, I have a well-rounded skill set and am always looking to expand my knowledge and take on new challenges. As a dedicated and driven individual, I am constantly seeking out opportunities to grow and improve as a programmer.',
-    url: siteConfig.url,
-    image: `${siteConfig.url}/images/profile.jpg`,
-    email: 'mohammadumar8010@gmail.com',
-    sameAs: [
-      'https://www.github.com/developer-umar',
-      'https://www.linkedin.com/in/umar15dev',
-      'https://x.com/mdumar9140',
-      'https://www.instagram.com/_umar_md_1/',
-    ],
-    address: {
-      '@type': 'PostalAddress',
-      addressCountry: 'India',
-    },
-    alumniOf: [
-      {
-        '@type': 'Organization',
-        name: 'Impact Academies',
-      },
-    ],
-    worksFor: [
-      {
-        '@type': 'Organization',
-        name: 'Impact Academies',
-        jobTitle: 'IT Tutor',
-      },
-      {
-        '@type': 'Organization',
-        name: 'Dragon Sino Group',
-        jobTitle: 'Full Stack Developer',
-      },
-    ],
-    knowsAbout: [
-      'React.js',
-      'Next.js',
-      'Node.js',
-      'TypeScript',
-      'JavaScript',
-      'MERN Stack',
-      'MEVN Stack',
-      'Tailwind CSS',
-      'MongoDB',
-      'Express.js',
-      'Vue.js',
-      'Web Development',
-      'Frontend Development',
-      'Full Stack Development',
-      'React-Native Development',
-      'Freelance Development',
-      'Online Interview Assessment System',
-      "Dr. Manisha's Yoga Institute",
-      'Anandlok Ayurveda',
-    ],
-    offers: {
-      '@type': 'Service',
-      name: 'Web Development Services',
+  const siteUrl = siteConfig.url || "https://umar-portfolio-teal.vercel.app";
+
+  // Styled 'U' that looks like a logo
+  const logoText = "🌀 𝗨";
+
+  const structuredData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      name: "Mohammad Umar",
+      jobTitle: "MERN Stack Developer | Frontend & Backend",
+      url: siteUrl,
       description:
-        'Professional web development services including React.js, Next.js, Node.js, React-Native, and full-stack development. Best Freelancer Near me, Affordable Freelancer Near me, Hourly based paid freelancer near me.',
-      provider: {
-        '@type': 'Person',
-        name: 'Mohammad  Umar',
-      },
-      areaServed: 'United Kingdom',
-      serviceType: 'Web Development',
+        "Mohammad Umar — MERN Stack Developer building responsive and scalable web apps using React, Next.js, Node.js and MongoDB."
     },
-    hasOccupation: {
-      '@type': 'Occupation',
-      name: 'Full Stack Web Developer',
-      description:
-        'MERN stack & Full Stack Developer specializing in express.js React.js, Next.js, Node.js, and MERN stack',
-      occupationLocation: {
-        '@type': 'Country',
-        name: 'India',
-      },
-    },
-  };
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: "Umar | MERN Stack Developer",
+      url: siteUrl,
+      potentialAction: {
+        "@type": "SearchAction",
+        target: `${siteUrl}/?s={search_term_string}`,
+        "query-input": "required name=search_term_string"
+      }
+    }
+  ];
 
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <Script
-          id="gtm-script"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','GTM-PDKQ7JZ');
-            `,
-          }}
+        <meta charSet="utf-8" />
+        <title>{`${logoText}mar | MERN Stack Developer`}</title>
+
+        {/* Basic meta */}
+        <meta
+          name="description"
+          content="Mohammad Umar — MERN Stack Developer (React, Next.js, Node.js, Express, MongoDB). Frontend & Backend developer building scalable web apps."
         />
-        <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5126308192729168"
-          crossOrigin="anonymous"
+        <meta
+          name="keywords"
+          content="MERN Developer, React Developer, Next.js, Node.js, MongoDB, Full Stack Developer, Frontend Developer India"
         />
+        <meta name="author" content="Mohammad Umar" />
+        <meta name="theme-color" content="#0ea5a4" />
+
+        {/* Favicons (optional, no real logo used) */}
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌀</text></svg>" />
+
+        {/* Open Graph (for previews) */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={`${logoText}mar | MERN Stack Developer`} />
+        <meta
+          property="og:description"
+          content="MERN Stack Developer building scalable and responsive web applications using React, Next.js, Node.js and MongoDB."
+        />
+        <meta property="og:url" content={siteUrl} />
+        <meta property="og:image" content="https://dummyimage.com/600x400/0ea5a4/ffffff&text=U" />
+        <meta property="og:site_name" content="Umar | MERN Developer" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${logoText}mar | MERN Stack Developer`} />
+        <meta
+          name="twitter:description"
+          content="MERN Stack Developer — React, Next.js, Node.js, Express, MongoDB. Frontend & Backend."
+        />
+        <meta name="twitter:image" content="https://dummyimage.com/600x400/0ea5a4/ffffff&text=U" />
+
+        {/* Structured data JSON-LD */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(structuredData),
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
-        <link rel="preload" href="/images/profile.jpg" as="image" />
-        <link
-          rel="preload"
-          href="/_next/static/css/app/layout.css"
-          as="style"
-        />
+
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-        <link rel="dns-prefetch" href="//github.com" />
-        <link rel="dns-prefetch" href="//linkedin.com" />
       </head>
-      <body className={cn('min-h-screen font-sans', fonts)}>
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-PDKQ7JZ"
-            height="0"
-            width="0"
-            style={{ display: 'none', visibility: 'hidden' }}
-          />
-        </noscript>
-        <Script
-          id="clarity-script"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function(c,l,a,r,i,t,y){
-                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-              })(window, document, "clarity", "script", "oi5p8b8wvn");
-            `,
-          }}
-        />
+
+      <body className={cn("min-h-screen font-sans", fonts)}>
         <ThemeProvider attribute="class" defaultTheme="dark">
           <ActiveSectionProvider>
             {children}
