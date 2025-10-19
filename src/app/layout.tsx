@@ -1,50 +1,52 @@
-import "@/styles/globals.css";
-import { PropsWithChildren } from "react";
-import { ActiveSectionProvider } from "@/components/active-section-provider";
-import { ThemeProvider } from "@/components/theme-provider";
-import { Toaster } from "@/components/toaster";
-import { fonts } from "@/lib/fonts";
-import { cn } from "@/lib/utils";
+import '@/styles/globals.css';
+
+import { PropsWithChildren } from 'react';
+
+import { ActiveSectionProvider } from '@/components/active-section-provider';
+import { ThemeProvider } from '@/components/theme-provider';
+import { Toaster } from '@/components/toaster';
+import { fonts } from '@/lib/fonts';
+import { cn } from '@/lib/utils';
 
 const RootLayout = ({ children }: PropsWithChildren) => {
-  const siteUrl =  "https://umar-portfolio-teal.vercel.app";
+  const siteUrl = 'https://umar-portfolio-teal.vercel.app';
   const logoPath = `${siteUrl}/images/logo.png`;
   const logoPng = `${siteUrl}/images/logo.png`;
 
   const structuredData = [
     {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      name: "Mohammad Umar",
-      jobTitle: "MERN Stack Developer | Frontend & Backend",
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      name: 'Mohammad Umar',
+      jobTitle: 'MERN Stack Developer | Frontend & Backend',
       url: siteUrl,
       image: logoPath,
       sameAs: [
-        "https://github.com/developer-umar",
-        "https://www.linkedin.com/in/umar15dev",
-        "https://x.com/mdumar9140"
+        'https://github.com/developer-umar',
+        'https://www.linkedin.com/in/umar15dev',
+        'https://x.com/mdumar9140',
       ],
       description:
-        "Mohammad Umar — MERN Stack Developer building responsive web apps with React, Next.js, Node.js and MongoDB."
+        'Mohammad Umar — MERN Stack Developer building responsive web apps with React, Next.js, Node.js and MongoDB.',
     },
     {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      name: "Mohammad Umar | MERN Developer",
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: 'Mohammad Umar | MERN Developer',
       url: siteUrl,
       publisher: {
-        "@type": "Person",
-        name: "Mohammad Umar",
+        '@type': 'Person',
+        name: 'Mohammad Umar',
         url: siteUrl,
-        image: logoPath
+        image: logoPath,
       },
       potentialAction: {
-        "@type": "SearchAction",
+        '@type': 'SearchAction',
         target: `${siteUrl}/?s={search_term_string}`,
-        "query-input": "required name=search_term_string"
+        'query-input': 'required name=search_term_string',
       },
-      image: logoPath
-    }
+      image: logoPath,
+    },
   ];
 
   return (
@@ -67,23 +69,37 @@ const RootLayout = ({ children }: PropsWithChildren) => {
 
         {/* Favicons / icons */}
         <link rel="icon" href="/images/logo.svg" />
-        <link rel="icon" type="image/png" sizes="512x512" href="/images/logo-512.png" />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="512x512"
+          href="/images/logo-512.png"
+        />
         <link rel="apple-touch-icon" href="/images/logo-512.png" />
 
         {/* Open Graph (rich link preview) */}
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Mohammad Umar | MERN Stack Developer" />
+        <meta
+          property="og:title"
+          content="Mohammad Umar | MERN Stack Developer"
+        />
         <meta
           property="og:description"
           content="MERN Stack Developer building scalable and responsive web applications using React, Next.js, Node.js and MongoDB."
         />
         <meta property="og:url" content={siteUrl} />
         <meta property="og:image" content={logoPng || logoPath} />
-        <meta property="og:site_name" content="Mohammad Umar | MERN Developer" />
+        <meta
+          property="og:site_name"
+          content="Mohammad Umar | MERN Developer"
+        />
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Mohammad Umar | MERN Stack Developer" />
+        <meta
+          name="twitter:title"
+          content="Mohammad Umar | MERN Stack Developer"
+        />
         <meta
           name="twitter:description"
           content="MERN Stack Developer — React, Next.js, Node.js, Express, MongoDB. Frontend & Backend."
@@ -101,7 +117,7 @@ const RootLayout = ({ children }: PropsWithChildren) => {
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       </head>
 
-      <body className={cn("min-h-screen font-sans", fonts)}>
+      <body className={cn('min-h-screen font-sans', fonts)}>
         <ThemeProvider attribute="class" defaultTheme="dark">
           <ActiveSectionProvider>
             {children}

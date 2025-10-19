@@ -63,5 +63,5 @@ export const siteConfig = {
     'Available for Hire',
     'Open Source Contributor',
   ],
-  url: 'https://umar-portfolio-teal.vercel.app'
+  url: 'https://umar-portfolio-teal.vercel.app',
 };
