@@ -1,7 +1,5 @@
 import '@/styles/globals.css';
-
 import { PropsWithChildren } from 'react';
-
 import { ActiveSectionProvider } from '@/components/active-section-provider';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Toaster } from '@/components/toaster';
@@ -10,8 +8,7 @@ import { cn } from '@/lib/utils';
 
 const RootLayout = ({ children }: PropsWithChildren) => {
   const siteUrl = 'https://umar-portfolio-teal.vercel.app';
-  const logoPath = `${siteUrl}/images/logo.png`;
-  const logoPng = `${siteUrl}/images/logo.png`;
+  const logoPath = `${siteUrl}/favicon/logo.ico`;
 
   const structuredData = [
     {
@@ -68,14 +65,7 @@ const RootLayout = ({ children }: PropsWithChildren) => {
         <meta name="theme-color" content="#0ea5a4" />
 
         {/* Favicons / icons */}
-        <link rel="icon" href="/images/logo.svg" />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="512x512"
-          href="/images/logo-512.png"
-        />
-        <link rel="apple-touch-icon" href="/images/logo-512.png" />
+        <link rel="icon" href="/favicon/logo.ico" />
 
         {/* Open Graph (rich link preview) */}
         <meta property="og:type" content="website" />
@@ -88,7 +78,7 @@ const RootLayout = ({ children }: PropsWithChildren) => {
           content="MERN Stack Developer building scalable and responsive web applications using React, Next.js, Node.js and MongoDB."
         />
         <meta property="og:url" content={siteUrl} />
-        <meta property="og:image" content={logoPng || logoPath} />
+        <meta property="og:image" content={logoPath} />
         <meta
           property="og:site_name"
           content="Mohammad Umar | MERN Developer"
@@ -104,7 +94,7 @@ const RootLayout = ({ children }: PropsWithChildren) => {
           name="twitter:description"
           content="MERN Stack Developer — React, Next.js, Node.js, Express, MongoDB. Frontend & Backend."
         />
-        <meta name="twitter:image" content={logoPng || logoPath} />
+        <meta name="twitter:image" content={logoPath} />
 
         {/* Structured data JSON-LD */}
         <script
