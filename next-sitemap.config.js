@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: 'https://umar-portfolio-teal.vercel.app', 
+  siteUrl: process.env.SITE_URL || '',
   generateRobotsTxt: true,
   generateIndexSitemap: false,
   robotsTxtOptions: {

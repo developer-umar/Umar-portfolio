@@ -60,12 +60,8 @@ export const siteConfig = {
     'GitHub',
     'Vercel',
     'Netlify',
-    'United Kingdom',
     'Available for Hire',
     'Open Source Contributor',
   ],
-  url: env.SITE_URL || 'https://yash-kapure.vercel.app',
-  googleSiteVerificationId:
-    env.GOOGLE_SITE_VERIFICATION_ID ||
-    'zjseZ18pLQ6Tg4nvpJJkRVevf7dK4QzbpzMuZNCKNYQ',
+  url: env.SITE_URL || 'https://umar-portfolio-teal.vercel.app'
 };
