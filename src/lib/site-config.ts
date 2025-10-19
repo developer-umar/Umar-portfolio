@@ -1,4 +1,4 @@
-import { env } from '@/env.mjs';
+// import { env } from '@/env.mjs';
 
 export const siteConfig = {
   title:
@@ -63,5 +63,5 @@ export const siteConfig = {
     'Available for Hire',
     'Open Source Contributor',
   ],
-  url: env.SITE_URL || 'https://umar-portfolio-teal.vercel.app'
+  url: 'https://umar-portfolio-teal.vercel.app'
 };
