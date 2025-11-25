@@ -52,7 +52,7 @@ export const projectsData = [
       'MERN Stack',
     ],
     links: {
-      preview: 'https://naturescurezone.onrender.com/',
+      preview: 'https://naturescure.vercel.app/',
       github: 'hhttps://github.com/Saral224x2/naturescure',
     },
   },
