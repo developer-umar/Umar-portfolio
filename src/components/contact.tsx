@@ -27,7 +27,7 @@ export default function Contact() {
 
     try {
       const res = await fetch(
-        'https://umar-portfolio-teal.vercel.app/api/send-email',
+        'https://umar-portfolio-teal.vercel.app/api/send-email/route.ts',
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
