@@ -1,30 +1,22 @@
 export const runtime = 'nodejs';
-
 import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
-
 export async function POST(request: NextRequest) {
   try {
     const { name, email, message } = await request.json();
-
     if (!name || !email || !message) {
       return NextResponse.json(
         { error: 'All fields are required' },
         { status: 400 }
       );
     }
-
-    // ⭐ FIX: Gmail SMTP config (Vercel compatible — must use host/port/secure)
     const transporter = nodemailer.createTransport({
-      host: 'smtp.gmail.com',
-      port: 465,
-      secure: true,
+      service: 'gmail',
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASSWORD,
       },
     });
-
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: process.env.CONTACT_EMAIL,
@@ -44,7 +36,6 @@ export async function POST(request: NextRequest) {
         </div>
       `,
     };
-
     await transporter.sendMail(mailOptions);
 
     return NextResponse.json(
