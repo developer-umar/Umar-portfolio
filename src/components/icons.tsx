@@ -216,6 +216,43 @@ export const Icons = {
       </defs>
     </svg>
   ),
+
+  nodejs: (props: LucideProps) => (
+    <svg viewBox="0 0 50 50" {...props}>
+      <path fill="currentColor" d="M25 2L46 14V36L25 48L4 36V14L25 2Z" />
+      <path fill="#fff" d="M25 12L38 20V30L25 38L12 30V20L25 12Z" />
+    </svg>
+  ),
+
+  expressjs: (props: LucideProps) => (
+    <svg viewBox="0 0 100 50" {...props}>
+      <text
+        x="50%"
+        y="55%"
+        textAnchor="middle"
+        dominantBaseline="middle"
+        fontSize="32"
+        fontFamily="Arial"
+        fill="currentColor"
+      >
+        Ex
+      </text>
+    </svg>
+  ),
+
+  mongodb: (props: LucideProps) => (
+    <svg viewBox="0 0 50 50" {...props}>
+      <path
+        fill="#4FAA41"
+        d="M25 2C22 10 14 18 14 28C14 38 21 45 25 48C29 45 36 38 36 28C36 18 28 10 25 2Z"
+      />
+      <path
+        fill="#fff"
+        d="M25 14C28 19 30 24 30 28C30 34 27 38 25 40C23 38 20 34 20 28C20 24 22 19 25 14Z"
+      />
+    </svg>
+  ),
+
   docker: (props: LucideProps) => (
     <svg viewBox="0 0 50 50" {...props}>
       <g clipPath="url(#clip0_717_81)">

@@ -4,37 +4,35 @@ import { motion } from 'framer-motion';
 
 import { skillsData } from '@/lib/data';
 
-const fadeInAnimationVariants = {
-  initial: {
-    opacity: 0,
-    y: 100,
-  },
-  animate: (index: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: 0.05 * index,
-    },
-  }),
-};
-
 export const Skills = () => {
   return (
-    <div className="mt-10 flex w-full flex-wrap justify-between gap-10 px-5 sm:justify-center sm:px-0 md:mt-14 lg:justify-between">
-      {skillsData.map(({ icon }, index) => (
-        <motion.div
-          key={index}
-          variants={fadeInAnimationVariants}
-          initial="initial"
-          whileInView="animate"
-          viewport={{
-            once: true,
-          }}
-          custom={index}
-        >
-          {icon}
-        </motion.div>
-      ))}
+    <div className="w-full overflow-hidden py-10">
+      <motion.div
+        className="flex gap-10"
+        animate={{ x: ['0%', '-100%'] }}
+        transition={{
+          ease: 'linear',
+          repeat: Infinity,
+          duration: 18,
+        }}
+      >
+        {/* FIRST LOOP */}
+        {skillsData.map(({ icon }, index) => (
+          <div key={index} className="flex items-center justify-center">
+            {icon}
+          </div>
+        ))}
+
+        {/* SECOND LOOP FOR SMOOTH INFINITE SCROLL */}
+        {skillsData.map(({ icon }, index) => (
+          <div
+            key={`clone-${index}`}
+            className="flex items-center justify-center"
+          >
+            {icon}
+          </div>
+        ))}
+      </motion.div>
     </div>
   );
 };
